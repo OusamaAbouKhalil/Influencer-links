@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OEG - Smart Tutor Finder | Download Now</title>
+    <meta name="description" content="Download OEG - Find qualified tutors for exam assistance and study support">
+    
+    <!-- Preload logo for faster display -->
+    <link rel="preload" href="logo.png" as="image">
+    
+    <!-- Prevent caching for accurate tracking -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 24px;
+            padding: 48px 32px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 24px;
+            background: white;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+            padding: 8px;
+        }
+
+        .logo-text {
+            font-size: 48px;
+            font-weight: bold;
+            color: white;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+
+        .redirect-message {
+            background: #f0f4ff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+            border-left: 4px solid #667eea;
+        }
+
+        .redirect-message p {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .loader {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-top: 8px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 18px 32px;
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .download-btn:active {
+            transform: translateY(0);
+        }
+
+        .download-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .alternative-btn {
+            display: inline-block;
+            color: #667eea;
+            font-size: 14px;
+            margin-top: 16px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .alternative-btn:hover {
+            text-decoration: underline;
+        }
+
+        .features {
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid #eee;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            text-align: left;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: #f0f4ff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-text {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .referral-badge {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #1a1a1a;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 32px 24px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .logo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .logo-text {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="referral-badge">
+             Referred by Raphael
+        </div>
+
+        <div class="logo">
+            <img src="logo.png" alt="OEG Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 24px;">
+        </div>
+
+        <h1>OEG - Find Expert Tutors</h1>
+        <p class="tagline">Find qualified tutors for exam assistance and study support</p>
+
+        <div class="redirect-message">
+            <p>🚀 Redirecting to your app store...</p>
+            <div class="loader"></div>
+        </div>
+
+        <!-- iOS Download Button -->
+        <a href="https://apps.apple.com/app/apple-store/id6444192194?pt=127265717&ct=Raphael&mt=8" 
+           id="iosBtn" 
+           class="download-btn" 
+           style="display: none;">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+            </svg>
+            Download on App Store
+        </a>
+
+        <!-- Android Download Button -->
+        <a href="https://play.google.com/store/apps/details?id=our.easy.game&referrer=utm_source%3DRaphael%26utm_medium%3Dreferral%26utm_campaign%3DRaphael" 
+           id="androidBtn" 
+           class="download-btn" 
+           style="display: none;">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+            </svg>
+            Get it on Google Play
+        </a>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">📚</div>
+                <div class="feature-text">
+                    <strong>Wide Range of Subjects</strong><br>
+                    Math, Science, English, History & more
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">👨‍🏫</div>
+                <div class="feature-text">
+                    <strong>Verified Tutors</strong><br>
+                    All tutors are carefully checked & reviewed
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⏰</div>
+                <div class="feature-text">
+                    <strong>Flexible Learning</strong><br>
+                    Learn anytime, anywhere at your own pace
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="alternative-btn" id="alternativeLink" style="display: none;">
+            Not working? Click here to download manually
+        </a>
+    </div>
+
+    <script>
+        // Device detection and automatic redirect
+        function detectDevice() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            
+            // iOS detection
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return 'ios';
+            }
+            
+            // Android detection
+            if (/android/i.test(userAgent)) {
+                return 'android';
+            }
+            
+            // Mac detection (could be interested in iOS app)
+            if (/Macintosh|MacIntel|MacPPC|Mac68K/.test(userAgent)) {
+                return 'ios';
+            }
+            
+            // Default to Android for other devices
+            return 'android';
+        }
+
+        // App Store URLs
+        const iosUrl = 'https://apps.apple.com/app/apple-store/id6444192194?pt=127265717&ct=Raphael&mt=8';
+        const androidUrl = 'https://play.google.com/store/apps/details?id=our.easy.game&referrer=utm_source%3DRaphael%26utm_medium%3Dreferral%26utm_campaign%3DRaphael';
+
+        // Get elements
+        const iosBtn = document.getElementById('iosBtn');
+        const androidBtn = document.getElementById('androidBtn');
+        const alternativeLink = document.getElementById('alternativeLink');
+        const redirectMessage = document.querySelector('.redirect-message');
+
+        // Detect device and redirect
+        const device = detectDevice();
+        let targetUrl;
+
+        if (device === 'ios') {
+            targetUrl = iosUrl;
+            iosBtn.style.display = 'inline-flex';
+            alternativeLink.href = androidUrl;
+            alternativeLink.style.display = 'inline-block';
+            alternativeLink.textContent = 'Using Android? Click here';
+        } else {
+            targetUrl = androidUrl;
+            androidBtn.style.display = 'inline-flex';
+            alternativeLink.href = iosUrl;
+            alternativeLink.style.display = 'inline-block';
+            alternativeLink.textContent = 'Using iOS? Click here';
+        }
+
+        // Preload logo image first, then redirect
+        const logoImg = document.querySelector('.logo img');
+        let redirectTimer;
+
+        // Function to start redirect
+        function startRedirect() {
+            redirectTimer = setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 3500); // Increased to 3.5 seconds for better UX
+        }
+
+        // Wait for logo to load, then start countdown
+        if (logoImg.complete) {
+            // Logo already loaded
+            startRedirect();
+        } else {
+            // Wait for logo to load
+            logoImg.addEventListener('load', startRedirect);
+            // Fallback: start anyway after 1 second if logo fails to load
+            setTimeout(startRedirect, 1000);
+        }
+
+        // Track page load
+        console.log('OEG Referral Page - Raphael');
+        console.log('Device detected:', device);
+        console.log('Redirecting to:', targetUrl);
+
+        // Optional: Send analytics event if you add analytics later
+        // Example: gtag('event', 'referral_page_view', { referrer: 'Raphael', device: device });
+    </script>
+</body>
+</html>
+
